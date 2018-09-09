@@ -1,0 +1,364 @@
+/*
+ CSS Ruleset Organization Pattern:
+  - Colors
+  - Positioning and sizing
+  - fonts
+  - Other
+*/
+
+/* Selection styles */
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: red;
+}
+
+::selection {
+    color: black;
+    background: red;
+}
+
+
+/* Default styles */
+html {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #fff;
+  /* text-align: center; */
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Reem Kufi', sans-serif;
+  font-weight: 400;
+}
+h2 {
+  font-size: 55px;
+  margin-top: 100px;
+  margin-bottom: 0;
+}
+h4 {
+  font-size: 30px;
+}
+p {
+  font-family: 'Hind', sans-serif;
+  font-size: 13px;
+}
+input {
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  width: 45%;
+  padding: 0;
+  margin: 8px 0;
+}
+
+
+/* Header styles */
+header {
+  width: 20%;
+  display: inline-block;
+  position: fixed;
+}
+  .navBar {
+    font-family: 'Calibri', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    list-style-type: none;
+    line-height: 50px;
+    color: #fff;
+  }
+    .navBar li {
+      /* background: green; */
+    }
+    .navBar li a {
+      display: inline-block;
+      margin-left: 30%;
+      /* background: #f00; */
+      min-width: 80px;
+      margin-bottom: 0;
+    }
+
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #bbb;
+}
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+.navHighlight {
+  display: block;
+  width: 0px;
+  height: 30px;
+  background: white;
+  vertical-align: middle;
+  position: absolute;
+}
+
+/* CSS for white rectanlge length extension when a navigation link is clicked */
+#homeNav div {
+  top: 25px; /* (navHighlight.height / 2) + ((navBar.lineHeight - navHighlight.height) / 2) */
+}
+#aboutMeNav div {
+  top: 75px;
+}
+#resumeNav div {
+  top: 125px;
+}
+#skillsNav div {
+  top: 175px;
+}
+#contactNav div {
+  top: 225px;
+}
+/* Apply CSS to div child of id'd element that is clicked on */
+#homeNav: > div,
+#aboutMeNav:focus > div,
+#resumeNav:focus > div,
+#skillsNav:focus > div,
+#contactNav:focus > div {
+  width: 82%;
+  transition: width 250ms ease;
+}
+
+
+/* Main styles */
+main {
+  width: 70%;
+  display: inline-block;
+  margin-left: 25%;
+}
+#home {
+  padding-top: 30px;
+}
+
+#mainTitle {
+
+}
+  #mainTitle h1 {
+    display: inline-block;
+    font-size: 80px;
+    line-height: 80px;
+  }
+  #mainTitle img {
+    display: inline-block;
+    border-radius: 50%;
+    width: 170px;
+    margin-left: 200px;
+  }
+  /* For devices smaller than 600px */
+	@media only screen and (max-width: 992px) {
+		#mainTitle img {
+      margin-left: 50px;
+    }
+	}
+
+
+
+/* Skills styles */
+.skillBox {
+}
+.flexList {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+}
+  .flexList li {
+    display: inline-block;
+    margin: 1%;
+  }
+.skillItem {
+  width: 90px;
+}
+
+
+/* Contact styles */
+.contactIcon {
+  width: 70px;
+  margin: 10px 5px 0; /* Top Right/Left Bottom */
+}
+.emailInfo {
+  height: 100px;
+  margin-bottom: 10px;
+}
+  .emailInfo img {
+    display: inline-block;
+  }
+  .emailInfo h4 {
+    margin-left: 3%;
+    display: inline-block;
+  }
+.formElement input, .formElement p {
+  display: inline-block;
+}
+.formContent {
+  width: 45%;
+  height: 150px;
+  border-radius: 15px;
+  top: 0;
+}
+.contentTitle {
+  vertical-align: top;
+}
+.formSendButtonContainer {
+  width: 45%;
+  margin-top: 20px;
+}
+.sendButton {
+  width: 120px;
+  height: 40px;
+  line-height: 36px;  /* set line-height equal to the height of the button to get the text to center vertically */
+  border-radius: 20px;
+  border: 2px solid white;
+  background: #000;
+  color: #fff;
+  font-family: 'Calibri', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  margin: 0 auto 70px;
+  cursor: pointer;
+}
+.sendButton:hover {
+  color: black;
+  background: white;
+}
+.warning {
+  color: red;
+}
+
+
+/* Footer Styles */
+footer {
+	font-family: 'Hind', sans-serif;
+  margin-bottom: 40px;
+}
+
+	footer div {
+		display: inline-block;
+		vertical-align: top;
+		width: 30%;
+	}
+
+	footer div:first-child {
+		margin-left: 6%;
+	}
+
+	footer h6 {
+		font-weight: normal;
+		font-size: 13px;
+		margin-bottom: 0;
+		margin-top: 25px;
+	}
+
+	footer ul {
+		list-style-type: none;
+		margin: 0;
+		font-size: 12px;
+    padding-left: 10%;
+	}
+  .remark {
+    display: block;
+    margin-top: 20px;
+    width: 96%;
+  }
+    .remark p {
+      text-align: right;
+      font-size: 12px;
+      font-weight: normal;
+    }
+    .remark a {
+      text-decoration: underline;
+    }
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------*/
+/* Media Queries */
+
+@media only screen and (max-width: 500px) {
+
+  /* Shrink footer for smaller screens */
+  footer h6 {
+    font-size: 11px;
+  }
+  footer ul {
+    font-size: 10px;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 800px) {
+
+  /* Header styles */
+
+  header {
+    width: 20%;
+    display: none;
+    position: fixed;
+  }
+    header nav ul {
+      font-family: 'Calibri', sans-serif;
+      text-decoration: none;
+      font-weight: bold;
+      list-style-type: none;
+      margin-left: 20%;
+      line-height: 50px;
+      color: #fff;
+    }
+
+
+  main {
+    margin: 0 auto;
+    display: block;
+    background: #f0f;
+    width: 90%;
+  }
+  #home {
+    padding-top: 10px;
+  }
+
+  #mainTitle {
+
+  }
+    #mainTitle h1 {
+      display: block;
+      font-size: 70px;
+      line-height: 80px;
+      margin: 20px 0;
+    }
+    #mainTitle img {
+      display: block;
+      border-radius: 50%;
+      width: 170px;
+      margin: 0 auto;
+    }
+
+
+
+  input, .formContent, .formSendButtonContainer {
+    width: 100%;
+  }
+
+
+  footer {
+    line-height: 25px;
+  }
+
+}
