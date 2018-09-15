@@ -201,6 +201,7 @@ main {
   height: 150px;
   border-radius: 15px;
   top: 0;
+  margin-top: 1%;
 }
 .contentTitle {
   vertical-align: top;
@@ -224,13 +225,6 @@ main {
   display: block;
   margin: 0 auto 70px;
   cursor: pointer;
-}
-.sendButton:hover {
-  color: black;
-  background: white;
-}
-.warning {
-  color: red;
 }
 
 
@@ -302,7 +296,13 @@ footer {
 
 }
 
-
+@media only screen and (min-width: 801px) {
+  /* Only add send button hover capabilities if on desktop */
+  .sendButton:hover {
+    color: black;
+    background: white;
+  }
+}
 
 @media only screen and (max-width: 800px) {
 
@@ -346,10 +346,13 @@ footer {
       display: block;
       border-radius: 50%;
       width: 170px;
-      margin: 0 auto;
+      margin: 0 auto 40px;
     }
 
 
+  .contactIconsContainer {
+    text-align: center;
+  }
 
   input, .formContent, .formSendButtonContainer {
     width: 100%;
