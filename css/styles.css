@@ -79,6 +79,10 @@ header {
       min-width: 80px;
       margin-bottom: 0;
     }
+  /* hide mobile navigation, show desktop navigation by default */
+  #mobileNav {
+    display: none;
+  }
 
 a:visited {
   color: #fff;
@@ -193,7 +197,7 @@ main {
     margin-left: 3%;
     display: inline-block;
   }
-.formElement input, .formElement p {
+.formElement input, .formElement p, .formElement textarea {
   display: inline-block;
 }
 .formContent {
@@ -308,20 +312,23 @@ footer {
 
   /* Header styles */
 
-  header {
-    width: 20%;
+  /* Hide desktop navigation, show mobile navigation */
+  #desktopNav {
     display: none;
-    position: fixed;
   }
-    header nav ul {
-      font-family: 'Calibri', sans-serif;
-      text-decoration: none;
-      font-weight: bold;
-      list-style-type: none;
-      margin-left: 20%;
-      line-height: 50px;
-      color: #fff;
-    }
+  #mobileNav {
+    display: block;
+    position: fixed;
+    width: 95%;
+    height: 30px;
+    margin: 0 auto;
+    background: rgba(0,0,0,0);
+  }
+  .menuIcon {
+    height: 25px;
+    width: 25px;
+    float: right;
+  }
 
 
   main {
