@@ -1,0 +1,331 @@
+/* General styles */
+
+html {
+  background: black;
+}
+
+body {
+  background: white;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  /* Removes ability to drag and drop images */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 70px; /* scale with varied device size */
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+p {
+  font-family: 'Hind', sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.content_section {
+  background: white;
+  width: 65%;
+  margin: 90px auto;
+  text-align: center;
+}
+#the_team {
+  width: 90%;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Header */
+header {
+  height: 60px;
+  /* background: green; */
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 0;
+  z-index: 11;
+  background: black;
+  width: 100%;
+}
+  nav ul {
+
+  }
+    nav ul li {
+      font-family: 'Hind', sans-serif;
+      font-size: 14px;
+      position: relative;
+      list-style-type: none;
+      display: inline-block;
+      color: #999;
+      margin: 0 30px;
+    }
+    nav ul li:hover {
+      color: white;
+    }
+    /* Apply formatting to QUEEN'S ROBOMASTERS text in nav bar */
+    nav ul li:first-of-type {
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 18px;
+      color: white;
+      margin-right: 100px;
+    }
+    nav ul li:first-of-type:hover {
+      color: #bbb;
+    }
+/* Site nav icon only used for mobile site nav */
+#site_nav_icon {
+  display: none;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Slideshow */
+
+.slideshow_container {
+
+  margin: 30px auto 0;
+  text-align: center;
+  height: 400px;
+}
+.slideshow_slide {
+  margin: 0 auto;
+  height: 100%;
+}
+
+.slideshow_button {
+  height: 33px;
+  width: 50px;
+  border: none;
+  top: -230px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+.slideshow_button:first-of-type {
+  transform: rotate(-90deg);
+  float: left;
+}
+.slideshow_button:last-of-type {
+  transform: rotate(90deg);
+  float: right;
+}
+  .slideshow_button img {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* What we do */
+
+h4 {
+  font-size: 30px;
+}
+
+.philosphy_section {
+  margin-bottom: 30px;
+}
+  /* div container for h4 */
+  .philosphy_section div:first-of-type {
+    display: inline-block;
+    width: 29%;
+    vertical-align: top;  /* fixed bug of div being pushed down for some reason */
+  }
+  /* div container for p */
+  .philosphy_section div:last-of-type {
+    display: inline-block;
+    width: 70%;
+  }
+  .philosphy_section p {
+    text-align: left;
+  }
+  .philosphy_section h4 {
+    line-height: 0px;
+    font-weight: 700;
+  }
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Meet the team */
+
+.profile_container {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  /* background: yellow; */
+  width: 250px;
+  margin: 0 20px;
+  line-height: 10px;
+  text-align: center;
+}
+
+.profile_image {
+  margin: 0 auto;
+  width: 75%;
+  border-radius: 50%;
+}
+
+.profile_name {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.profile_position {
+  font-style: italic;
+}
+
+.profile_email {
+
+}
+
+
+.linkedin_icon {
+  margin: 0 auto;
+  width: 15%;
+}
+  .linkedin_icon:hover {
+    transform: scale(0.91);
+  }
+  .linkedin_icon:active {
+    transform: scale(0.7);
+  }
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Sponsorship */
+
+#sponsorship_link {
+  font-weight: 700;
+  font-size: 17px;
+  /* text-decoration: underline; */
+  color: black;
+  background: white;
+  width: 30%;
+  text-align: center;
+  display: inline-block;
+  line-height: 60px;
+  box-shadow: 0 0 10px 2px #ccc;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Contact us */
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Footer */
+
+footer {
+  background: black;
+  color: white;
+  height: 150px;
+}
+  footer img {
+    float: left;
+    height: 80%;
+  }
+  footer p {
+    font-family: 'Raleway', sans-serif;
+    float: right;
+    margin-top: 60px;
+    margin-right: 100px;
+    vertical-align: middle;
+    font-size: 17px;
+  }
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* Styles for text underline animation */
+a, a:visited {
+  text-decoration: none;
+  position: relative;
+}
+a:after, a:visited:after {
+  content: '';
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  background: #fff;
+  transition: 0.3s;
+}
+a:hover:after, a:visited:hover:after {
+  width: 100%;
+}
+a.block, a:visited.block {
+  display: block;
+  padding: 0.5em;
+}
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+/* Mobile site navigation */
+@media screen and (max-width: 600px) {
+  nav {
+    height: 90px;
+    width: 100%;
+    background: black;
+  }
+    nav ul li {
+      display: none;
+      width: 100%;
+      margin:  30px 0;
+      font-size: 20px;
+    }
+    nav ul li:first-of-type {
+      font-size: 22px;
+      display: block;
+    }
+  #site_nav_icon {
+    display: inline-block;
+    height: 20px;
+    width: 25px;
+    top: 0;
+    left: 0;
+    margin-right: 30px;
+  }
+
+}
