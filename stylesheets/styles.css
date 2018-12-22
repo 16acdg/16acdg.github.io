@@ -63,7 +63,6 @@ a {
 /* Header */
 header {
   height: 60px;
-  /* background: green; */
 }
 nav {
   position: fixed;
@@ -75,9 +74,11 @@ nav {
   width: 100%;
 }
   nav ul {
+    white-space: nowrap;
 
   }
     nav ul li {
+      display: block;
       font-family: 'Hind', sans-serif;
       font-size: 14px;
       position: relative;
@@ -85,32 +86,50 @@ nav {
       display: inline-block;
       color: #999;
       margin: 0 30px;
+      vertical-align: middle;
+      margin-bottom: -20px;
+    }
+    nav ul li:first-of-type {
+      margin-right: 400px;
     }
     nav ul li:hover {
       color: white;
     }
-    /* Apply formatting to QUEEN'S ROBOMASTERS text in nav bar */
-    nav ul li:first-of-type {
-      text-transform: uppercase;
-      font-weight: 900;
-      font-size: 18px;
-      color: white;
-      margin-right: 100px;
-    }
-    nav ul li:first-of-type:hover {
-      color: #bbb;
-    }
+
+
 /* Site nav icon only used for mobile site nav */
 #site_nav_icon {
   display: none;
 }
+#header_logo {
+    height: 70px;
+    padding: 0;
+    margin: 0;
+    /* background: green; */
+}
+
+
+#main_background {
+  width: 100%;
+  box-shadow: 0px 3px 5px #ddd;
+}
+
+
 
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Slideshow */
 
-.slideshow_container {
+/* NOTE: what we do secion includes the heading "What is robomaster". To change the position of the second paragraph in this section,
+  adjust its position manually using the what_we_do_title id */
+#what_we_do {
+  margin-top: 50px;
+}
+#what_we_do_title {
+  margin-top: 10px;
+}
 
+.slideshow_container {
   margin: 30px auto 0;
   text-align: center;
   height: 400px;
@@ -121,6 +140,7 @@ nav {
 }
 
 .slideshow_button {
+  display: block;
   height: 33px;
   width: 50px;
   border: none;
@@ -144,6 +164,37 @@ nav {
     width: 100%;
   }
 
+/* Hide slideshow nav buttons for screensize less than 949px */
+@media screen and (max-width: 949px) {
+  .slideshow_button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 919px) {
+  .content_section {
+      width: 85%;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .slideshow_container {
+      width: 100%;
+  }
+  .slideshow_slide {
+    width: 100%;
+    height: auto;
+  }
+
+  .content_section {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  #what_we_do {
+    margin-top: -50px;
+  }
+
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* What we do */
@@ -174,6 +225,28 @@ h4 {
     font-weight: 700;
   }
 
+@media screen and (max-width: 705px) {
+  .philosphy_section {
+    /* background: pink; */
+  }
+  .philosphy_section div:first-of-type {
+    display: block;
+    width: 100%;
+  }
+  .philosphy_section div:last-of-type {
+    display: block;
+    width: 100%;
+  }
+  .philosphy_section h4 {
+    margin-bottom: 25px;
+  }
+  .philosphy_section p {
+    text-align: center;
+  }
+  h2 {
+    margin-top: 80px;
+  }
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Meet the team */
@@ -220,6 +293,17 @@ h4 {
     transform: scale(0.7);
   }
 
+/* Think about combining this MQ with the 636px one */
+@media screen and (max-width: 649px) {
+  .profile_container {
+    margin-bottom: 66px;
+  }
+  .profile_container:last-of-type {
+    margin-bottom: 0;
+  }
+
+}
+
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Sponsorship */
 
@@ -235,7 +319,16 @@ h4 {
   line-height: 60px;
   box-shadow: 0 0 10px 2px #ccc;
 }
+#sponsorship_link:hover {
+  background: #eee;
+  transition: 0.3s
+}
 
+@media screen and (max-width: 664px) {
+  #sponsorship_link {
+    width: 60%;
+  }
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Contact us */
@@ -277,11 +370,12 @@ footer {
 
 /* ----------------------------------------------------------------------------------------------------------------------------- */
 /* Styles for text underline animation */
-a, a:visited {
+.underline_anim{} /* add class to add underline on hover animation */
+.underline_anim, .underline_anim:visited {
   text-decoration: none;
   position: relative;
 }
-a:after, a:visited:after {
+.underline_anim:after, .underline_anim:visited:after {
   content: '';
   height: 2px;
   position: absolute;
@@ -291,10 +385,10 @@ a:after, a:visited:after {
   background: #fff;
   transition: 0.3s;
 }
-a:hover:after, a:visited:hover:after {
+.underline_anim:hover:after, .underline_anim:visited:hover:after {
   width: 100%;
 }
-a.block, a:visited.block {
+.underline_anim.block, .underline_anim:visited.block {
   display: block;
   padding: 0.5em;
 }
@@ -302,8 +396,11 @@ a.block, a:visited.block {
 
 
 
-/* Mobile site navigation */
+/* Mobile styles */
 @media screen and (max-width: 600px) {
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+  /* Mobile site navigation */
   nav {
     height: 90px;
     width: 100%;
@@ -327,5 +424,27 @@ a.block, a:visited.block {
     left: 0;
     margin-right: 30px;
   }
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+  /* body */
+
+
+
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+  /* footer */
+
+  footer img {
+    float: none;
+    margin: 0 auto;
+  }
+
+  footer p {
+    float: none;
+  }
+
+
+  /* ----------------------------------------------------------------------------------------------------------------------------- */
+
 
 }
