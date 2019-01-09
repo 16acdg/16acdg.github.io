@@ -1,13 +1,25 @@
-/* General styles */
-
 html {
-  background: black;
-}
-
-body {
-  background: white;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  display: block; /* default */
+}
+
+
+p {
+  font-size: 15px;
+}
+h1 {
+  font-weight: 400;
+  font-size: 35px;
+}
+h2 {
+  font-weight: 700;
+}
+strong {
+  font-weight: 900;
+  font-size: 40px;
 }
 
 img {
@@ -19,432 +31,123 @@ img {
   user-drag: none;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: 'Raleway', sans-serif;
-  text-align: center;
-  font-weight: 400;
-}
-
-h1 {
-  margin-top: 70px; /* scale with varied device size */
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 22px;
-}
-
-p {
-  font-family: 'Hind', sans-serif;
-  text-align: center;
-}
-
 a {
+  color: black;
   text-decoration: none;
-  color: inherit;
 }
-.content_section {
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Main Page Styles */
+
+
+#landing_page {
+  margin-top: 70px; /* moves to 60px after jquery animation */
   background: white;
-  width: 65%;
-  margin: 90px auto;
-  text-align: center;
-}
-#the_team {
-  width: 90%;
+  opacity: 0;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Header */
-header {
-  height: 60px;
-}
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 0;
-  z-index: 11;
-  background: black;
-  width: 100%;
-}
-  nav ul {
-    white-space: nowrap;
-
-  }
-    nav ul li {
-      display: block;
-      font-family: 'Hind', sans-serif;
-      font-size: 14px;
-      position: relative;
-      list-style-type: none;
-      display: inline-block;
-      color: #999;
-      margin: 0 30px;
-      vertical-align: middle;
-      margin-bottom: -20px;
-    }
-    nav ul li:first-of-type {
-      margin-right: 400px;
-    }
-    nav ul li:hover {
-      color: white;
-    }
-
-
-/* Site nav icon only used for mobile site nav */
-#site_nav_icon {
-  display: none;
-}
-#header_logo {
-    height: 70px;
-    padding: 0;
-    margin: 0;
-    /* background: green; */
-}
-
-
-#main_background {
-  width: 100%;
-  box-shadow: 0px 3px 5px #ddd;
-}
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Slideshow */
-
-/* NOTE: what we do secion includes the heading "What is robomaster". To change the position of the second paragraph in this section,
-  adjust its position manually using the what_we_do_title id */
-#what_we_do {
-  margin-top: 50px;
-}
-#what_we_do_title {
-  margin-top: 10px;
-}
-
-.slideshow_container {
-  margin: 30px auto 0;
-  text-align: center;
-  height: 400px;
-}
-.slideshow_slide {
+#profile_image {
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
-  height: 100%;
-}
-
-.slideshow_button {
-  display: block;
-  height: 33px;
-  width: 50px;
-  border: none;
-  top: -230px;
-  position: relative;
-  margin: 0;
-  padding: 0;
-}
-.slideshow_button:first-of-type {
-  transform: rotate(-90deg);
-  float: left;
-}
-.slideshow_button:last-of-type {
-  transform: rotate(90deg);
-  float: right;
-}
-  .slideshow_button img {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-  }
-
-/* Hide slideshow nav buttons for screensize less than 949px */
-@media screen and (max-width: 949px) {
-  .slideshow_button {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 919px) {
-  .content_section {
-      width: 85%;
-  }
-}
-
-@media screen and (max-width: 636px) {
-  .slideshow_container {
-      width: 100%;
-  }
-  .slideshow_slide {
-    width: 100%;
-    height: auto;
-  }
-
-  .content_section {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  #what_we_do {
-    margin-top: -50px;
-  }
-
-}
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* What we do */
-
-h4 {
-  font-size: 30px;
-}
-
-.philosphy_section {
-  margin-bottom: 30px;
-}
-  /* div container for h4 */
-  .philosphy_section div:first-of-type {
-    display: inline-block;
-    width: 29%;
-    vertical-align: top;  /* fixed bug of div being pushed down for some reason */
-  }
-  /* div container for p */
-  .philosphy_section div:last-of-type {
-    display: inline-block;
-    width: 70%;
-  }
-  .philosphy_section p {
-    text-align: left;
-  }
-  .philosphy_section h4 {
-    line-height: 0px;
-    font-weight: 700;
-  }
-
-@media screen and (max-width: 705px) {
-  .philosphy_section {
-    /* background: pink; */
-  }
-  .philosphy_section div:first-of-type {
-    display: block;
-    width: 100%;
-  }
-  .philosphy_section div:last-of-type {
-    display: block;
-    width: 100%;
-  }
-  .philosphy_section h4 {
-    margin-bottom: 25px;
-  }
-  .philosphy_section p {
-    text-align: center;
-  }
-  h2 {
-    margin-top: 80px;
-  }
-}
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Meet the team */
-
-.profile_container {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  /* background: yellow; */
-  width: 250px;
-  margin: 0 20px;
-  line-height: 10px;
-  text-align: center;
-}
-
-.profile_image {
-  margin: 0 auto;
-  width: 75%;
   border-radius: 50%;
 }
 
-.profile_name {
-  font-weight: 900;
-  font-size: 20px;
-}
-
-.profile_position {
-  font-style: italic;
-}
-
-.profile_email {
-
-}
-
-
-.linkedin_icon {
+.main_content {
+  width: 60%;
   margin: 0 auto;
-  width: 15%;
-}
-  .linkedin_icon:hover {
-    transform: scale(0.91);
-  }
-  .linkedin_icon:active {
-    transform: scale(0.7);
-  }
-
-/* Think about combining this MQ with the 636px one */
-@media screen and (max-width: 649px) {
-  .profile_container {
-    margin-bottom: 66px;
-  }
-  .profile_container:last-of-type {
-    margin-bottom: 0;
-  }
-
+  line-height: 22px;
 }
 
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Sponsorship */
+#site_links_container {
+  margin: 0 auto;
+  /* background: yellow; */
+  margin: 40px auto 40px;
 
-#sponsorship_link {
-  font-weight: 700;
-  font-size: 17px;
-  /* text-decoration: underline; */
-  color: black;
-  background: white;
-  width: 30%;
-  text-align: center;
+}
+.nav_item {
   display: inline-block;
-  line-height: 60px;
-  box-shadow: 0 0 10px 2px #ccc;
+  margin: 0 1%;
 }
-#sponsorship_link:hover {
-  background: #eee;
-  transition: 0.3s
+.site_link {
+
 }
 
-@media screen and (max-width: 664px) {
-  #sponsorship_link {
-    width: 60%;
-  }
+#external_links_container {
+  margin: 0 auto;
+  /* background: green; */
+  width: 40%;
+  height: 50px;
 }
+.external_link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 3%;
 
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Contact us */
+  /* Use CSS transition property to apply brightness-fading animation to highlighted external link icon */
+  -webkit-filter: brightness(100%);
+  transition: -webkit-filter 0.3s ease-in-out;
 
-
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Footer */
-
-footer {
-  background: black;
-  color: white;
-  height: 150px;
 }
-  footer img {
-    float: left;
-    height: 80%;
-  }
-  footer p {
-    font-family: 'Raleway', sans-serif;
-    float: right;
-    margin-top: 60px;
-    margin-right: 100px;
-    vertical-align: middle;
-    font-size: 17px;
+  .external_link:hover {
+    -webkit-filter: brightness(40%);
   }
 
 
-/* ----------------------------------------------------------------------------------------------------------------------------- */
 
 
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/* Project Page Styles */
 
-
-
-
-
-
-
-
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* Styles for text underline animation */
-.underline_anim{} /* add class to add underline on hover animation */
-.underline_anim, .underline_anim:visited {
-  text-decoration: none;
-  position: relative;
-}
-.underline_anim:after, .underline_anim:visited:after {
-  content: '';
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  background: #fff;
-  transition: 0.3s;
-}
-.underline_anim:hover:after, .underline_anim:visited:hover:after {
+#project_page {
+  margin-top: 333px;
   width: 100%;
 }
-.underline_anim.block, .underline_anim:visited.block {
-  display: block;
-  padding: 0.5em;
+
+#project_filter {
+  border-radius: 90px;
+  margin: 0 auto;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  border-radius: 0;
+  background-color: white;
+  border-color: black;
+  border-width: thin;
 }
-/* ----------------------------------------------------------------------------------------------------------------------------- */
 
+option {
+  font-size: 30px;
+}
 
-
-/* Mobile styles */
-@media screen and (max-width: 600px) {
-
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* Mobile site navigation */
-  nav {
-    height: 90px;
-    width: 100%;
-    background: black;
+.project_container {
+  margin: 20px auto;
+  height: 70px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 5px 5px #ddd;
+}
+  .project_container h3 {
+    /* float: left; */
   }
-    nav ul li {
-      display: none;
-      width: 100%;
-      margin:  30px 0;
-      font-size: 20px;
-    }
-    nav ul li:first-of-type {
-      font-size: 22px;
-      display: block;
-    }
-  #site_nav_icon {
+  .project_container p {
+    /* float: left; */
+  }
+  .project_container img {
     display: inline-block;
-    height: 20px;
-    width: 25px;
-    top: 0;
-    left: 0;
-    margin-right: 30px;
+    float: right;
+    margin-right: 40px;
+    margin-top: -26px;
+    height: 40px;
+    width: 40px;
+    filter: brightness(0);
+    -webkit-filter: brightness(0);
+    -moz-filter: brightness(0);
   }
 
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* body */
-
-
-
-
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-  /* footer */
-
-  footer img {
-    float: none;
-    margin: 0 auto;
-  }
-
-  footer p {
-    float: none;
-  }
-
-
-  /* ----------------------------------------------------------------------------------------------------------------------------- */
-
-
-}
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
