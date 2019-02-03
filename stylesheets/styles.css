@@ -104,50 +104,43 @@ a {
 /*-----------------------------------------------------------------------------------------------------------------------------------*/
 /* Project Page Styles */
 
-#project_page {
+#projects_container {
   margin-top: 333px;
   width: 100%;
 }
 
-#project_filter {
-  border-radius: 90px;
-  margin: 0 auto;
-  width: 150px;
-  height: 40px;
-  text-align: center;
-  border-radius: 0;
-  background-color: white;
-  border-color: black;
-  border-width: thin;
-}
-
-option {
-  font-size: 30px;
-}
-
 .project_container {
-  margin: 20px auto;
-  height: 70px;
-  width: 300px;
+  margin: 0 auto;
+  width: 80%;
   background: white;
   box-shadow: 0 0 5px 5px #ddd;
 }
   .project_container h3 {
-    /* float: left; */
+    font-family: 'Roboto', sans-serif;
+    padding-top: 20px;
+    font-size: 28px;
+    text-align: center
   }
   .project_container p {
-    /* float: left; */
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    font-size: 13px;
+    line-height: 20px;
+    width: 60%;
+    margin: 0 auto 30px;
+  }
+  .project_github_link {
+    display: inline-block;
+    position: absolute;
+    left: 15%;
+    padding-top: 20px;
+  }
+  .project_container iframe {
+    display: inline;
+    margin: 0 0 30px;
   }
   .project_container img {
-    display: inline-block;
-    float: right;
-    margin-right: 40px;
-    margin-top: -26px;
-    height: 40px;
-    width: 40px;
-    filter: brightness(0);
-    -webkit-filter: brightness(0);
-    -moz-filter: brightness(0);
+    margin: 0 0 30px;
   }
 
 /*-----------------------------------------------------------------------------------------------------------------------------------*/

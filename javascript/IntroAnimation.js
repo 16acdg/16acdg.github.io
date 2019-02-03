@@ -11,7 +11,7 @@ $(document).ready(function() {
       }, 500, "swing")
   }
 
-  setTimeout(showPage, 400)  // call showPage function after 1 seconds
+  setTimeout(showPage, 400)  // call showPage function after 0.4 seconds
 
 
 
