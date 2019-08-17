@@ -1,0 +1,114 @@
+#page {
+  opacity: 0;
+}
+
+#app {
+  width: 100%;
+  margin-top: -50px;
+}
+
+.books-container {
+
+}
+
+.sub-title {
+  font-family: 'Hind', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+}
+
+.halfscreen {
+  width: 40%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.book-container {
+  margin: 50px auto 10px auto;
+  padding: 20px;
+  display: block;
+  border-radius: 25px;
+  box-shadow: 2px 5px 2px 2px #3A608B;
+  font-family: 'Hind', sans-serif;
+  width: 300px;
+  background: white;
+}
+
+.book-title {
+  color: black;
+  font-weight: 200;
+  font-size: 23px;
+  margin-top: 5px;
+}
+
+.book-image {
+  box-shadow: 2px 5px 2px 2px #555;
+}
+
+.book-author {
+  color: black;
+  margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.info-button {
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  margin-left: 300px;
+  margin-top: -25px;
+  transition: 0.5s;
+}
+  .info-button:hover {
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+  .info-button > p {
+    font-size: 20px;
+    margin-top: 2.5px;
+    font-family: serif;
+  }
+  .info-button > div {
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+  }
+@media only screen and (max-width: 990px) {
+  .info-button {
+    display: none;
+  }
+}
+
+.show-info {
+  border-radius: 25px;
+  transition: 0.5s;
+  position: absolute;
+  margin-left: -20px;
+  overflow: scroll;
+  width: 300px;
+  height: 400px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+  .show-info:hover {
+    transform: scaleX(1.05) scaleY(1.05);
+  }
+  .show-info::-webkit-scrollbar { width: 0 !important }
+  .show-summary {
+    opacity: 0;
+    display: block;
+    animation-name: fadeTextIn;
+    animation-duration: 0.5s;
+    animation-delay: 0.37s;
+    animation-fill-mode: forwards;
+  }
+  .hide-summary {
+    display: none;
+  }
+  @keyframes fadeTextIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
