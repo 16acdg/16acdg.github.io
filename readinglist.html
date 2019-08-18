@@ -39,6 +39,16 @@
 
       </div>
     </div>
+
+    <script>
+      // Readonly endpoint for my reading list data
+      const URL = 'https://shielded-wave-89396.herokuapp.com/data'
+      fetch(URL).then(res => {
+        return res.json()
+      }).then(data => {
+        console.log(data)
+      })
+    </script>
     <!-- <div id="recommend-book-container">
       <h2>Recommend a book to me!</h2>
       <form>
