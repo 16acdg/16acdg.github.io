@@ -11,11 +11,11 @@ const ID_TO_INJECT_INTO = "projects-container"
 const PROJECT_DATA = [
   {
     name: "Race Car AI Navigation",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/racecar-ai"
   },
   {
     name: "Promptu",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/TOHacks2019-Promptu"
   },
   {
     name: "A* Pathfinding Implementation",
@@ -23,23 +23,23 @@ const PROJECT_DATA = [
   },
   {
     name: "D&D CMS",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/dndcms"
   },
   {
     name: "Lloyd's Deployment Algorithm Application",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/"
   },
   {
     name: "iOS Workout App",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/"
   },
   {
     name: "Mousesweeper",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/Mousesweeper"
   },
   {
     name: "Quandary",
-    link: "https://16acdg.github.io/projname"
+    link: "https://16acdg.github.io/"
   }
 ]
 
