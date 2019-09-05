@@ -15,7 +15,7 @@ const PROJECT_DATA = [
   },
   {
     name: "Promptu",
-    link: "https://16acdg.github.io/TOHacks2019-Promptu"
+    link: "https://16acdg.github.io/Promptu"
   },
   {
     name: "A* Pathfinding Implementation",
