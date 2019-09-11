@@ -49,7 +49,7 @@ function populateProjects() {
     projContainer.innerHTML += `
       <a href="${PROJECT_DATA[i].link}" target="_blank">
         <div class="project-container">
-          <span>${PROJECT_DATA[i].name}</span>
+          <span><p>${PROJECT_DATA[i].name}</p></span>
         </div>
       </a>
     `

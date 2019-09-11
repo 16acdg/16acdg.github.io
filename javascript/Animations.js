@@ -25,7 +25,7 @@ function showNav() {
       'opacity': '0'
     })
     $("#nav-container").animate({
-      left: 10
+      left: 0
     }, 500)
   }
   isNavVisible = !isNavVisible
@@ -49,13 +49,26 @@ function loadPageAnim() {
   }, 400)
 }
 
-// Temporarily enlarges the contact info when 'Contact' button is clicked in the nav menu
-function highlightContacts() {
-  $contactsContainer = $("#contacts_container")
-  $contactsContainer.addClass('highlight-contact-info')
-  $contactsContainer.removeClass('unhighlight-contact-info')
-  setTimeout(() => {
-    $contactsContainer.removeClass('highlight-contact-info')
-    $contactsContainer.addClass('unhighlight-contact-info')
-  }, 800)
+function handleContactClick() {
+  highlightContacts(800)
+  showNav()
 }
+
+// Temporarily enlarges the contact info when 'Contact' button is clicked in the nav menu
+function highlightContacts(delay = 0) {
+  $contactsContainer = $("#email-link")
+    setTimeout(() => {
+      $contactsContainer.addClass('highlight-contact-info')
+      $contactsContainer.removeClass('unhighlight-contact-info')
+      setTimeout(() => {
+        $contactsContainer.removeClass('highlight-contact-info')
+        $contactsContainer.addClass('unhighlight-contact-info')
+      }, 800)
+    }, delay)
+}
+
+
+$('.experience-cell').click(function() {
+  $(this).toggleClass('view-experience-cell', 500)
+  $(this).find('.experience-category-title').toggleClass('experience-category-title-viewed', 500)
+})
