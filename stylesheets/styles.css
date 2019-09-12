@@ -98,9 +98,8 @@ footer {
 }
 
 .link-icon {
-  width: 35px;
-  padding-top: 15px;
-  filter: invert(100%);
+  width: 45px;
+  padding-top: 12px;
 }
 
 .link-icon:hover {
@@ -108,7 +107,6 @@ footer {
 
 #linkedin-icon:hover,
 #github-icon:hover {
-  filter: invert(10%);
   background: #8a92c7;
   transition: 0.3s;
 }
