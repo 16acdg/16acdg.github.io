@@ -100,22 +100,27 @@ footer {
 .link-icon {
   width: 35px;
   padding-top: 15px;
+  filter: invert(100%);
+}
+
+.link-icon:hover {
 }
 
 #linkedin-icon:hover,
 #github-icon:hover {
-  color: #1a2237;
-  background: white;
+  filter: invert(10%);
+  background: #8a92c7;
   transition: 0.3s;
 }
 
-#resume-link:hover {
-  transition: 0.3s;
-  color: #ca6217;
+#email-link {
+  font-size: 1.4em;
 }
+
+#resume-link:hover,
 #email-link:hover {
   transition: 0.3s;
-  color: #ca6217;
+  color: #8a92c7;
 }
 
 /* Main content section */
@@ -153,7 +158,7 @@ footer {
 .highlight-contact-info {
   transition: 0.3s;
   transform: scale(1.4);
-  color: #ca6217;
+  color: #8a92c7;
 }
 .unhighlight-contact-info {
   transition: 0.3s;
