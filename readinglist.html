@@ -29,33 +29,34 @@
     <div id="content-layover">
       <main style="padding-top:1px;">
 
-        <br/>
-        <br/>
-        <h3><b>Already Read</b></h3>
-        <br/>
-
-        <!-- Books I've already read -->
-        <div class="book-shelf">
-
-        </div>
-
-        <br/>
-        <hr style="border: 0.3px solid #bbb;"/>
-        <br/>
-        <h3><b>Reading Next</b></h3>
-        <br/>
-
-        <!-- Books I'm reading next -->
-        <div class="book-shelf">
-
+        <div id="reading-list">
+          <h3 style="color:#aaa;margin:50px 0 40px;font-size:30px;" id="loading-books-text">loading books...</h3>
         </div>
 
       <script>
+        window.onload = () => {
+          // Period animations for loading text when waiting for book data
+          let txt = document.getElementById("loading-books-text")
+          let counter = 3
+          setInterval(() => {
+            let postfix = ''
+            if (counter == 3) {
+              postfix = '...'
+            } else if (counter == 2) {
+              postfix = '..'
+            } else if (counter == 1) {
+              postfix = '.'
+            }
+            counter++
+            if (counter == 4) {
+              counter = 1
+            }
+            txt.innerHTML = 'loading books' + postfix
+          }, 250)
+        }
+
         // Fetch my reading list data from my microservice supplying read-only data from Goodreads
         const URL = 'https://shielded-wave-89396.herokuapp.com/data'
-        let bookShelves = document.getElementsByClassName("book-shelf")
-        let completedBooks = bookShelves[0]
-        let inprogressBooks = bookShelves[1]
         fetch(URL).then(res => {
           return res.json()
         }).then(data => {
@@ -69,8 +70,29 @@
               inprogressBooksHTML += formatBookData(book)
             }
           })
-          completedBooks.innerHTML = completedBooksHTML
-          inprogressBooks.innerHTML = inprogressBooksHTML
+          // Inject all html for readinglist page after the data has been fetched
+          let html = `
+            <br/>
+            <br/>
+            <h3><b>Already Read</b></h3>
+            <br/>
+            <div class="book-shelf">
+          `
+          html += completedBooksHTML
+          html += `
+            </div>
+            <br/>
+            <hr style="border: 0.3px solid #bbb;"/>
+            <br/>
+            <h3><b>Reading Next</b></h3>
+            <br/>
+            <div class="book-shelf">
+          `
+          html += inprogressBooksHTML
+          html += `
+            </div>
+          `
+          document.getElementById("reading-list").innerHTML = html
         })
 
         function formatBookData(book) {
