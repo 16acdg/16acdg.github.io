@@ -117,6 +117,7 @@ footer {
 #email-link:hover {
   transition: 0.3s;
   color: #8a92c7;
+  cursor: pointer;
 }
 
 /* Main content section */

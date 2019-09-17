@@ -47,7 +47,7 @@ function populateProjects() {
   var projContainer = document.getElementById(ID_TO_INJECT_INTO)
   for (var i = 0; i < PROJECT_DATA.length; i++) {
     projContainer.innerHTML += `
-      <a href="${PROJECT_DATA[i].link}" target="_blank">
+      <a href="${PROJECT_DATA[i].link}">
         <div class="project-container">
           <span><p>${PROJECT_DATA[i].name}</p></span>
         </div>

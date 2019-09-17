@@ -28,7 +28,7 @@
             <a class="site-link" href="#home" onclick="showNav()">Home</a>
             <a class="site-link" href="./resume/AndrewGray.pdf" onclick="showNav()">Resume</a>
             <a class="site-link" href="#projects" onclick="showNav()">Projects</a>
-            <a class="site-link" href="#experience" onclick="showNav()">Experience</a>
+            <!-- <a class="site-link" href="#experience" onclick="showNav()">Experience</a> -->
             <a class="site-link" href="./readinglist.html" onclick="showNav()">Reading List</a>
             <a class="site-link" href="#home" onclick="handleContactClick()">Contact</a>
           </div>
@@ -56,7 +56,8 @@
             </a>
           </div>
           <div class="header-title-container" style="margin:60px 0 20vh;">
-            <h2 id="email-link"><b>andrew.gray@queensu.ca</b></h2>
+            <!-- <a href="mailto:andrew.gray@queensu.ca"><h2 id="email-link"><b>andrew.gray@queensu.ca</b></h2></a> -->
+            <h2 id="email-link"><b><a href="mailto:andrew.gray@queensu.ca">andrew.gray@queensu.ca</a></b></h2>
           </div>
         </div>
       </div>
@@ -64,34 +65,18 @@
 
     <main>
       <div id="projects" class="main-section">
-        <h1>Projects</h1>
+        <h1 style="font-size:3em;">Projects</h1>
         <div id="projects-container">
           <!-- projects injected here -->
         </div>
       </div>
 
-
-      <!--
-
-      Areas of experience:
-      - applied math
-      - web dev
-      - AI
-      - Networking
-      - Videogame dev
-      - Stuff I'm interested in:
-        - Business, finance
-        -
-        flex-wrap: wrap;                     /* enable flex items to wrap */
-          justify-content: space-around;
-      -->
-
-      <div id="experience" class="main-section">
+      <!-- Maybe have an experience section sometime in the future -->
+      <!-- <div id="experience" class="main-section">
         <h1>Experience</h1>
         <div id="experience-cells-container">
           <div class="experience-cell">
             <h3 class="experience-category-title">Videogame Dev</h3>
-            <!-- <p>Creative thinking <span style="font-size:30px;">∩</span> Critical thinking</p> -->
           </div>
           <div class="experience-cell">
             <h3 class="experience-category-title">Web Dev</h3>
@@ -109,7 +94,7 @@
             <h3 class="experience-category-title">What's Next?</h3>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </main>
 
