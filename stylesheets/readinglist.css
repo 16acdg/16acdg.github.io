@@ -169,7 +169,7 @@ footer {
 .book-shelf {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   width: 80%;
   margin: 0 auto;
 }
