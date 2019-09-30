@@ -15,19 +15,19 @@ const PROJECT_DATA = [
   },
   {
     name: "Race Car AI Navigation",
-    link: "https://16acdg.github.io/racecar-ai"
+    link: "/racecar-ai"
   },
   {
     name: "Promptu",
-    link: "https://16acdg.github.io/Promptu"
+    link: "/Promptu"
   },
   {
     name: "A* Pathfinding Implementation",
-    link: "https://16acdg.github.io/pathfinding"
+    link: "/pathfinding"
   },
   {
     name: "D&D CMS",
-    link: "https://16acdg.github.io/dndcms"
+    link: "/dndcms"
   },
   {
     name: "Lloyd's Deployment Algorithm Application",
@@ -39,7 +39,7 @@ const PROJECT_DATA = [
   },
   {
     name: "Mousesweeper",
-    link: "https://16acdg.github.io/Mousesweeper"
+    link: "/Mousesweeper"
   },
   {
     name: "Quandary",
