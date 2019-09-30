@@ -10,6 +10,10 @@ const ID_TO_INJECT_INTO = "projects-container"
 
 const PROJECT_DATA = [
   {
+    name: "Unity Dialog Editor Plugin",
+    link: "/dialog-editor-unity"
+  },
+  {
     name: "Race Car AI Navigation",
     link: "https://16acdg.github.io/racecar-ai"
   },
