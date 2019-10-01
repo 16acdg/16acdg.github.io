@@ -177,6 +177,9 @@ footer {
   transform: rotate(90deg);
   z-index: 101;
 }
+  .show-nav-button:hover {
+    cursor: pointer;
+  }
 #firstbar,
 #thirdbar {
   transition: 0.5s;
